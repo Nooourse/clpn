@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+
+import Form from './components/Form'
+import Choice from './components/Choice'
+import Valid from './components/Valid'
 
 class App extends Component {
+  state = {
+    email: localStorage.getItem('email') || null,
+    choice: localStorage.getItem('choice') || null,
+  }
+
+  handleLogin = email => {
+    this.setState({ email })
+  }
+
+  handleChoice = choice => {
+    this.setState({ choice })
+  }
+
   render() {
+    const { email, choice } = this.state
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className={styles.App}>
+        <header>
+          <p className={styles.logo}>CLPN</p>
+          <p className={styles.title}>Service client</p>
         </header>
+        {!email && <Form onSubmit={this.handleLogin} />}
+        {email && !choice && <Choice onSubmit={this.handleChoice} />}
+        {email && choice && <Valid email={email} choice={choice} />}
       </div>
     );
   }

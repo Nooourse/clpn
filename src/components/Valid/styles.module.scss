@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.Valid {
+	.done {
+		font-size: 18px;
+	}
+
+	.grey {
+		color: DimGrey;
+	}
+
+	.end {
+		border-top: 1px solid LightGrey;
+		padding-top: 15px;
+		font-family: clpn;
+
+		.happy {
+			color: $red;
+		}
+	}
+}

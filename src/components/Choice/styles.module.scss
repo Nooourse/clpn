@@ -1,0 +1,89 @@
+@import "../../variables.scss";
+
+.Choice {
+	.file {
+		font-size: 13px;
+		font-style: italic;
+	}
+
+	.details {
+		color: DimGrey;
+	}
+
+	select {
+		border: 1px solid LightGrey;
+		padding: 10px;
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+		border-radius: 3px;
+		background: white;
+	}
+
+	button[type="submit"] {
+		display: block;
+		width: 100%;
+		background: $blue;
+		border: 0;
+		color: white;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.error {
+		background: $lightred;
+		padding: 6px 8px;
+		border-radius: 3px;
+		color: white;
+		margin: 10px 0 0 0;
+	}
+
+	.validate {
+		position: relative;
+
+		.choice {
+			color: #3c3c3c;
+			font-size: 20px;
+			border: 1px solid LightGrey;
+			padding: 5px;
+			border-width: 1px 0;
+			text-align: center;
+
+			span {
+				display: inline-block;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+			}
+		}
+
+		.warning {
+			color: DimGrey;
+			font-style: italic;
+			margin-bottom: 25px;
+		}
+
+		button {
+			display: inline-block;
+			width: 100%;
+			padding: 10px;
+			font-size: 15px;
+			background: $lightred;
+			color: white;
+			border-radius: 3px;
+			border: 0;
+			font-weight: bold;
+
+			&:first-child {
+				background: $blue;
+				margin-bottom: 10px;
+				//margin-right: 10px;
+			}
+		}
+	}
+}

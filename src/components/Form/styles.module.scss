@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.Form {
+	.details {
+		color: DimGrey;
+	}
+
+	input {
+		border: 1px solid LightGrey;
+		padding: 10px;
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+		border-radius: 3px;
+	}
+
+	button[type="submit"] {
+		display: block;
+		width: 100%;
+		background: $blue;
+		border: 0;
+		color: white;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.file {
+		text-transform: uppercase;
+	}
+
+	.error {
+		background: $lightred;
+		padding: 6px 8px;
+		border-radius: 3px;
+		color: white;
+		margin: 10px 0 0 0;
+	}
+}
