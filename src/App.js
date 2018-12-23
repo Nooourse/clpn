@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import Form from './components/Form'
 import Choice from './components/Choice'
 import Valid from './components/Valid'
+import logo from './assets/logo.png'
 
 class App extends Component {
   state = {
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <div className={styles.App}>
         <header>
-          <p className={styles.logo}>CLPN</p>
+          <img src={logo} alt="CLPN - Logo" className={styles.logo}/>
           <p className={styles.title}>Service client</p>
         </header>
         {!email && <Form onSubmit={this.handleLogin} />}

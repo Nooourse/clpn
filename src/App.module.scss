@@ -1,22 +1,27 @@
 @import "./variables.scss";
 
 .App {
-  background: #f7f7f7;
-  width: calc(100% - 50px);
-  height: calc(100vh - 50px);
-  margin: 25px auto;
-  border-radius: 4px;
-  padding: 10px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  padding: 30px 20px 0 20px;
   overflow-y: auto;
+  margin: 0 auto;
+
+  @media (min-width: 600px) {
+    border: 1px solid LightGrey;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 30px;
+    background: #f7f7f7;
+  }
 }
 
 .logo {
-  font-family: clpn, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-
-  font-size: 50px;
-  margin: 0;
+  width: 120px;
 }
 
 .title {

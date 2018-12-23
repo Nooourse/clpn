@@ -18,6 +18,7 @@
 		margin-top: 5px;
 		border-radius: 3px;
 		background: white;
+		cursor: pointer;
 	}
 
 	button[type="submit"] {
@@ -31,6 +32,7 @@
 		border-radius: 3px;
 		font-size: 15px;
 		font-weight: bold;
+		cursor: pointer;
 	}
 
 	.error {
@@ -77,11 +79,12 @@
 			color: white;
 			border-radius: 3px;
 			border: 0;
-			font-weight: bold;
+			cursor: pointer;
 
 			&:first-child {
 				background: $blue;
 				margin-bottom: 10px;
+				font-weight: bold;
 				//margin-right: 10px;
 			}
 		}
